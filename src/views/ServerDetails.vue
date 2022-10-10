@@ -1,7 +1,7 @@
 <script setup>
 import { useRoute } from 'vue-router'
 import { onMounted, onUnmounted } from 'vue'
-import useServers from '@/composables/loadServers'
+import useServers from '@/composables/loadServers.js'
 
 const route = useRoute()
 

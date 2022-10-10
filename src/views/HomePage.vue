@@ -1,5 +1,5 @@
 <script setup>
-import useServer from '@/composables/loadServers'
+import useServer from '@/composables/loadServers.js'
 import BaseServer from '@/components/BaseServer.vue'
 
 const { servers, fetchServers } = useServer()
