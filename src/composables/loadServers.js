@@ -2,6 +2,7 @@ import { ref } from 'vue'
 import useApi from '@/composables/useApi'
 
 const servers = ref([])
+const currentServer = ref(null)
 const api = useApi()
 
 const useServer = () => {
@@ -12,7 +13,14 @@ const useServer = () => {
     servers.value.push(data)
     console.log(servers.value)
   }
-  return { servers, fetchServers }
+
+  const fetchServer = async (id) => {
+    const { data } = await api.instance.get(`${id}`)
+    currentServer.value = data
+    console.log(currentServer.value)
+  }
+
+  return { servers, fetchServers, fetchServer, currentServer }
 }
 
 export default useServer

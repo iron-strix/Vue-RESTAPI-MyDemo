@@ -6,6 +6,11 @@ const props = defineProps({
       ip: '8.8.8.8',
       hostname: 'Unknown',
       imageUrl: 'https://via.placeholder.com/150',
+      players: {
+        online: 1,
+        max: 20,
+        list: 'Alastara',
+      },
     }),
   },
 })
